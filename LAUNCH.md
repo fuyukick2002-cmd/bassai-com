@@ -1,9 +1,7 @@
-# 伐採.com 公開時に切り替えること
-1. index.html の `<meta name="robots" content="noindex">` を削除
-2. robots.txt を次に置き換え:
-   User-agent: *
-   Allow: /
-   Sitemap: https://xn--woq441c.com/sitemap.xml
-3. メール欄「準備中」を問い合わせ先（フォームまたはアドレス）に差し替え
-4. Cloudflare Pages の Custom domains に 伐採.com（xn--woq441c.com）を追加
-5. Search Console・Bing にサイトマップを送信
+# 伐採.com 独自ドメイン切り替え時にやること（2026/11/02 bassai-com.pages.dev で検索公開済み）
+1. Cloudflare Pages の Custom domains に 伐採.com（xn--woq441c.com）を追加
+2. index.html の canonical・og:url・og:image・構造化データの url を https://xn--woq441c.com/ に変更
+3. robots.txt・sitemap.xml の URL を https://xn--woq441c.com/ に変更
+4. bassai-com.pages.dev から 伐採.com へ 301 転送（Pages Functions の _middleware で Host 判定）
+5. メール欄「準備中」を問い合わせ先に差し替え
+6. Search Console・Bing に新しいドメインを登録しサイトマップ送信
