@@ -70,12 +70,22 @@ footer .wrap{padding-block:24px;font-size:13px;color:var(--muted);display:flex;j
 .hero-photo{width:100%;height:auto;max-width:420px;justify-self:end;border-radius:6px;aspect-ratio:4/3;object-fit:cover}
 @media (max-width:760px){.gallery{grid-template-columns:1fr 1fr}.gallery figure.tall{grid-row:auto}.gallery figure.tall img{aspect-ratio:4/3;height:auto}.hero-photo{justify-self:start;max-width:100%}}
 @media (max-width:760px){.hero .wrap{grid-template-columns:1fr;padding-block:36px 44px}.rings{justify-self:start;max-width:200px;order:-1}.services{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-grid{grid-template-columns:1fr}}
+.line-items{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.litem{background:#fff;border:1px solid var(--line);border-radius:6px;padding:20px;display:grid;gap:12px;align-content:start}
+.litem .kind{font-size:12px;letter-spacing:.1em;color:var(--accent);font-weight:700}
+.litem h3{font-size:18px}.litem p{color:var(--muted);font-size:14px}
+.thumbs{display:grid;gap:6px;grid-template-columns:repeat(3,1fr)}.thumbs.e{grid-template-columns:repeat(4,1fr)}
+.thumbs img{width:100%;height:auto;display:block}
+.litem .theme{width:120px;height:auto;border-radius:6px;border:1px solid var(--line)}
+.litem .btn{justify-self:start;background:#06c755;border-color:#06c755;color:#fff;font-size:14px;padding:10px 16px}
+.litem .soon{justify-self:start;font-size:13px;font-weight:700;color:var(--muted);border:1px dashed var(--line);padding:8px 14px;border-radius:4px}
+@media (max-width:760px){.line-items{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <div class="logo">伐採<span>.</span>com</div>
-  <nav aria-label="ページ内"><a href="#services">作業内容</a><a href="#works">作業の様子</a><a href="#price">料金の決まり方</a><a href="#flow">ご依頼の流れ</a><a href="#contact">お問い合わせ</a></nav>
+  <nav aria-label="ページ内"><a href="#services">作業内容</a><a href="#works">作業の様子</a><a href="#price">料金の決まり方</a><a href="#flow">ご依頼の流れ</a><a href="#contact">お問い合わせ</a><a href="#line">LINEスタンプ</a></nav>
 </div></header>
 
 <div class="hero"><div class="wrap">
@@ -155,6 +165,34 @@ footer .wrap{padding-block:24px;font-size:13px;color:var(--muted);display:flex;j
       <p class="note">対応エリア：長野県諏訪地域・上伊那、山梨県北杜市周辺（その他の地域はご相談ください）</p>
     </div>
   </div>
+</div></section>
+
+<section id="line"><div class="wrap">
+  <div class="sec-head"><h2>LINEスタンプ・絵文字</h2><p>現場の毎日から生まれたスタンプと絵文字を、LINE STOREで販売しています。</p></div>
+  <div class="line-items">
+    <article class="litem">
+      <span class="kind">LINEスタンプ（40個）</span>
+      <h3>草刈り・林業の現場職人さん</h3>
+      <div class="thumbs"><img src="img/line/stamp01.png" alt="おつかれさまです" width="240" height="208" loading="lazy"><img src="img/line/stamp13.png" alt="草ボーボーです" width="240" height="208" loading="lazy"><img src="img/line/stamp21.png" alt="狐につままれる" width="240" height="208" loading="lazy"><img src="img/line/stamp25.png" alt="ハチの巣あるよ" width="240" height="208" loading="lazy"><img src="img/line/stamp34.png" alt="チェンソー忘れた！" width="240" height="208" loading="lazy"><img src="img/line/stamp38.png" alt="山菜見つけた！" width="240" height="208" loading="lazy"></div>
+      <p>了解・遅刻・雨天中止・クマ出没・重機故障など、山仕事の連絡に使えるスタンプです。</p>
+      <a class="btn" href="https://line.me/S/sticker/37141632" target="_blank" rel="noopener">LINE STOREで見る</a>
+    </article>
+    <article class="litem">
+      <span class="kind">LINE絵文字（40個）</span>
+      <h3>草刈り・伐採 もりまる絵文字</h3>
+      <div class="thumbs e"><img src="img/line/emoji001.png" alt="もりまる 笑顔" width="180" height="180" loading="lazy"><img src="img/line/emoji002.png" alt="もりまる にっこり" width="180" height="180" loading="lazy"><img src="img/line/emoji004.png" alt="もりまる ハート" width="180" height="180" loading="lazy"><img src="img/line/emoji027.png" alt="もりまる 伐るぞ！" width="180" height="180" loading="lazy"><img src="img/line/emoji031.png" alt="クマ" width="180" height="180" loading="lazy"><img src="img/line/emoji032.png" alt="シカ" width="180" height="180" loading="lazy"><img src="img/line/emoji035.png" alt="フクロウ" width="180" height="180" loading="lazy"><img src="img/line/emoji038.png" alt="タヌキ" width="180" height="180" loading="lazy"></div>
+      <p>頭に芽が生えた森の子「もりまる」の絵文字です。あいさつのほか、草刈機・チェーンソー・森の動物もそろえました。</p>
+      <a class="btn" href="https://line.me/S/emoji/?id=6acc3a21673fb171f3d48a5e" target="_blank" rel="noopener">LINE STOREで見る</a>
+    </article>
+    <article class="litem">
+      <span class="kind">LINE着せかえ</span>
+      <h3>草刈り・伐採 もりまる着せかえ</h3>
+      <img class="theme" src="img/line/theme.png" alt="もりまる着せかえ" width="198" height="278" loading="lazy">
+      <p>もりまるがLINEの画面を森の色にします。</p>
+      <span class="soon">近日公開</span>
+    </article>
+  </div>
+  <p class="note">購入はLINEアプリ内のスタンプショップ、またはLINE STOREからできます。</p>
 </div></section>
 
 <footer><div class="wrap"><span>伐採.com　運営：IKETERUYA</span><span>損害賠償保険加入済み（適用は事前にご相談ください）</span></div></footer>
