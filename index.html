@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>伐採.com｜諏訪・上伊那・北杜の伐採・特殊伐採・草刈り（池輝屋）</title>
+<meta name="description" content="長野県諏訪地域・上伊那、山梨県北杜市周辺で、伐採・特殊伐採・草刈り・別荘地の管理を行います。家や電線のそばの大木も、現場を見てから方法と金額をお出しします。運営：池輝屋（IKETERUYA）">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{--bg:#f3f4ef;--surface:#e7e9e1;--ink:#1d2a24;--muted:#59645d;--line:#c9cdc2;--accent:#e2591b;--accent-ink:#fff;--ring:#b9a27f;
+--font-display:"Dela Gothic One","Hiragino Sans","Noto Sans JP",sans-serif;--font-body:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",system-ui,sans-serif;--font-num:"IBM Plex Mono",ui-monospace,monospace;box-sizing:border-box}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.8}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+a{color:inherit}:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+h1,h2,h3{line-height:1.3;margin:0}p{margin:0;max-width:38em}
+header.top{border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:14px;flex-wrap:wrap}
+.logo{font-family:var(--font-display);font-size:20px}.logo span{color:var(--accent)}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted)}nav a{text-decoration:none}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;padding-block:56px 64px}
+.eyebrow{font-size:13px;letter-spacing:.14em;color:var(--muted)}
+.hero h1{font-family:var(--font-display);font-weight:400;font-size:clamp(34px,6.4vw,64px);margin-top:12px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{margin-top:20px;font-size:17px;color:var(--muted)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;padding:12px 20px;border-radius:4px;font-weight:700;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.rings{width:100%;max-width:340px;aspect-ratio:1;justify-self:end}.rings svg{width:100%;height:100%;display:block}
+section{padding-block:64px;border-top:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+h2{font-family:var(--font-display);font-weight:400;font-size:clamp(24px,3.4vw,32px)}
+.sec-head p{color:var(--muted);font-size:15px}
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc{background:var(--bg);padding:24px;display:grid;gap:8px;align-content:start}
+.svc h3{font-size:19px}.svc .tag{font-size:12px;letter-spacing:.1em;color:var(--accent);font-weight:700}.svc p{color:var(--muted);font-size:15px}
+.factors{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px;min-width:520px}
+th,td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:13px;color:var(--muted);font-weight:500}td.k{font-weight:700;white-space:nowrap}
+.unit{font-family:var(--font-num);font-size:13px;background:var(--surface);padding:2px 6px;border-radius:3px;white-space:nowrap}
+.note{margin-top:16px;font-size:14px;color:var(--muted)}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:s}
+.flow li{counter-increment:s;display:grid;gap:6px}
+.flow li::before{content:counter(s);font-family:var(--font-num);font-size:13px;width:28px;height:28px;border-radius:50%;border:2px solid var(--accent);color:var(--accent);display:grid;place-items:center}
+.flow span{font-size:14px;color:var(--muted)}
+.contact{background:var(--surface)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.cbox{display:grid;gap:14px;align-content:start}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.row .lab{font-size:13px;color:var(--muted)}.row .val{font-family:var(--font-num);font-size:18px;user-select:all}
+.checklist{margin:0;padding-left:1.2em;color:var(--muted);font-size:15px;display:grid;gap:6px}
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:24px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr;padding-block:36px 44px}.rings{justify-self:start;max-width:200px;order:-1}.services{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="logo">伐採<span>.</span>com</div>
+  <nav aria-label="ページ内"><a href="#services">作業内容</a><a href="#price">料金の決まり方</a><a href="#flow">ご依頼の流れ</a><a href="#contact">お問い合わせ</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <div class="eyebrow">諏訪・上伊那・北杜｜伐採・特殊伐採・草刈り・別荘地管理</div>
+    <h1>倒せない木を、<br><em>安全に</em>倒します。</h1>
+    <p class="lead">家や電線のすぐそばの大木、傾いた木、別荘地の放置林。ロープで少しずつ吊り下ろす特殊伐採から、毎年の草刈りまで、現場を見てから方法と金額をお出しします。</p>
+    <div class="cta"><a class="btn primary" href="#contact">現地見積りを依頼する</a><a class="btn" href="#price">料金の決まり方</a></div>
+  </div>
+  <div class="rings" aria-hidden="true"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="96" fill="#e7e9e1" stroke="#b9a27f" stroke-width="3"/><g fill="none" stroke="#b9a27f" stroke-width="1.2"><ellipse cx="103" cy="98" rx="84" ry="82"/><ellipse cx="104" cy="97" rx="74" ry="71"/><ellipse cx="104" cy="97" rx="63" ry="61"/><ellipse cx="105" cy="96" rx="52" ry="51"/><ellipse cx="105" cy="96" rx="42" ry="40"/><ellipse cx="106" cy="95" rx="31" ry="30"/><ellipse cx="106" cy="95" rx="21" ry="20"/><ellipse cx="107" cy="95" rx="11" ry="10"/></g><circle cx="107" cy="95" r="3" fill="#b9a27f"/><path d="M100 100 L196 100" stroke="#e2591b" stroke-width="2.5"/></svg></div>
+</div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head"><h2>作業内容</h2><p>1本から、山林・区画単位まで。</p></div>
+  <div class="services">
+    <div class="svc"><div class="tag">特殊伐採</div><h3>家・電線・道路際の高木</h3><p>倒すスペースがない木は、木に登り上から順に切ってロープで吊り下ろします。重機が入れない庭でも対応します。</p></div>
+    <div class="svc"><div class="tag">伐採</div><h3>庭木・敷地内の立木</h3><p>伸びすぎた庭木、日当たりを遮る木、台風や雪で傾いた危険木の伐倒。枝払い・玉切りまで行います。</p></div>
+    <div class="svc"><div class="tag">草刈り</div><h3>空き地・法面・別荘区画</h3><p>刈払機での除草と刈草の処理。年数回の定期作業もお受けします。</p></div>
+    <div class="svc"><div class="tag">管理</div><h3>別荘地・山林の維持管理</h3><p>不在中の区画の見回り、倒木処理、緑地帯の手入れ。管理組合・法人からのご依頼にも対応します。</p></div>
+  </div>
+</div></section>
+
+<section id="price"><div class="wrap">
+  <div class="sec-head"><h2>料金の決まり方</h2><p>一律料金は出していません。金額を動かすのは次の項目です。</p></div>
+  <div class="factors"><table>
+    <thead><tr><th>項目</th><th>見るところ</th><th>単位</th></tr></thead>
+    <tbody>
+      <tr><td class="k">太さ</td><td>地上約1.2mの高さで測る幹の直径（胸高直径）。太いほど重く、作業時間が延びます。</td><td><span class="unit">cm</span></td></tr>
+      <tr><td class="k">高さ</td><td>樹高。高いほど切り分ける回数が増えます。</td><td><span class="unit">m</span></td></tr>
+      <tr><td class="k">周りの状況</td><td>建物・電線・道路・隣地との距離。倒せる向きがなければ特殊伐採になります。</td><td><span class="unit">現地確認</span></td></tr>
+      <tr><td class="k">処分方法</td><td>現場に置く／敷地内で整理／搬出して処分。搬出量で費用が変わります。</td><td><span class="unit">m³・台</span></td></tr>
+      <tr><td class="k">抜根</td><td>切り株を掘り起こすかどうか。</td><td><span class="unit">株</span></td></tr>
+      <tr><td class="k">草刈り面積</td><td>平地か斜面か、刈草を集めるかどうか。</td><td><span class="unit">m²</span></td></tr>
+    </tbody></table></div>
+  <p class="note">【要確認】現地確認・お見積りが無料かどうかをここに記入</p>
+</div></section>
+
+<section id="flow"><div class="wrap">
+  <div class="sec-head"><h2>ご依頼の流れ</h2></div>
+  <ol class="flow">
+    <li><b>ご連絡</b><span>場所・木の本数・写真があれば一緒にお送りください。</span></li>
+    <li><b>現地確認</b><span>太さ・高さ・周囲を見て、作業方法を決めます。</span></li>
+    <li><b>お見積り</b><span>作業内容と金額を書面でお出しします。</span></li>
+    <li><b>作業・ご請求</b><span>作業後に現場を確認いただき、請求書をお送りします。</span></li>
+  </ol>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <div class="sec-head"><h2>お問い合わせ</h2><p>写真があると見積りが早くなります。</p></div>
+  <div class="contact-grid">
+    <div class="cbox">
+      <div class="row"><span class="lab">電話</span><span class="val">【要記入】</span></div>
+      <div class="row"><span class="lab">メール</span><span class="val">【要記入】</span></div>
+      <div class="row"><span class="lab">受付時間</span><span>【要記入】</span></div>
+    </div>
+    <div class="cbox">
+      <b>お問い合わせ時にお伝えいただきたいこと</b>
+      <ul class="checklist"><li>作業場所（住所または別荘地名・区画番号）</li><li>木の本数と、おおよその太さ・高さ</li><li>近くにある建物・電線・道路</li><li>切った木や枝の処分を希望するか</li><li>希望時期</li></ul>
+      <p class="note">対応エリア：長野県諏訪地域・上伊那、山梨県北杜市周辺（その他の地域はご相談ください）</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>伐採.com　運営：池輝屋（IKETERUYA）</span><span>【要確認】損害賠償保険</span></div></footer>
+</body>
+</html>
