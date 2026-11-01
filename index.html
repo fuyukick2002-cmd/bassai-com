@@ -63,13 +63,19 @@ th{font-size:13px;color:var(--muted);font-weight:500}td.k{font-weight:700;white-
 .checklist{margin:0;padding-left:1.2em;color:var(--muted);font-size:15px;display:grid;gap:6px}
 footer{border-top:1px solid var(--line)}
 footer .wrap{padding-block:24px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.gallery figure{margin:0;display:grid;gap:6px}.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;display:block;background:var(--surface)}
+.gallery figure.tall{grid-row:span 2}.gallery figure.tall img{aspect-ratio:auto;height:100%;min-height:0}
+.gallery figcaption{font-size:13px;color:var(--muted)}
+.hero-photo{width:100%;max-width:420px;justify-self:end;border-radius:6px;aspect-ratio:4/3;object-fit:cover}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr}.gallery figure.tall{grid-row:auto}.gallery figure.tall img{aspect-ratio:4/3;height:auto}.hero-photo{justify-self:start;max-width:100%}}
 @media (max-width:760px){.hero .wrap{grid-template-columns:1fr;padding-block:36px 44px}.rings{justify-self:start;max-width:200px;order:-1}.services{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <div class="logo">伐採<span>.</span>com</div>
-  <nav aria-label="ページ内"><a href="#services">作業内容</a><a href="#price">料金の決まり方</a><a href="#flow">ご依頼の流れ</a><a href="#contact">お問い合わせ</a></nav>
+  <nav aria-label="ページ内"><a href="#services">作業内容</a><a href="#works">作業の様子</a><a href="#price">料金の決まり方</a><a href="#flow">ご依頼の流れ</a><a href="#contact">お問い合わせ</a></nav>
 </div></header>
 
 <div class="hero"><div class="wrap">
@@ -79,7 +85,7 @@ footer .wrap{padding-block:24px;font-size:13px;color:var(--muted);display:flex;j
     <p class="lead">家や電線のすぐそばの大木、傾いた木、別荘地の放置林。ロープで少しずつ吊り下ろす特殊伐採から、毎年の草刈りまで、現場を見てから方法と金額をお出しします。</p>
     <div class="cta"><a class="btn primary" href="#contact">現地見積りを依頼する</a><a class="btn" href="#price">料金の決まり方</a></div>
   </div>
-  <div class="rings" aria-hidden="true"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="96" fill="#e7e9e1" stroke="#b9a27f" stroke-width="3"/><g fill="none" stroke="#b9a27f" stroke-width="1.2"><ellipse cx="103" cy="98" rx="84" ry="82"/><ellipse cx="104" cy="97" rx="74" ry="71"/><ellipse cx="104" cy="97" rx="63" ry="61"/><ellipse cx="105" cy="96" rx="52" ry="51"/><ellipse cx="105" cy="96" rx="42" ry="40"/><ellipse cx="106" cy="95" rx="31" ry="30"/><ellipse cx="106" cy="95" rx="21" ry="20"/><ellipse cx="107" cy="95" rx="11" ry="10"/></g><circle cx="107" cy="95" r="3" fill="#b9a27f"/><path d="M100 100 L196 100" stroke="#e2591b" stroke-width="2.5"/></svg></div>
+  <img class="hero-photo" src="/img/sagyo-800.jpg" srcset="/img/sagyo-800.jpg 800w, /img/sagyo.jpg 1600w" sizes="(max-width:760px) 100vw, 420px" alt="重機と連携して伐採した木を玉切りしている現場" width="800" height="600">
 </div></div>
 
 <section id="services"><div class="wrap">
@@ -89,6 +95,17 @@ footer .wrap{padding-block:24px;font-size:13px;color:var(--muted);display:flex;j
     <div class="svc"><div class="tag">伐採</div><h3>庭木・敷地内の立木</h3><p>伸びすぎた庭木、日当たりを遮る木、台風や雪で傾いた危険木の伐倒。枝払い・玉切りまで行います。</p></div>
     <div class="svc"><div class="tag">草刈り</div><h3>空き地・法面・別荘区画</h3><p>刈払機での除草と刈草の処理。年数回の定期作業もお受けします。</p></div>
     <div class="svc"><div class="tag">管理</div><h3>別荘地・山林の維持管理</h3><p>不在中の区画の見回り、倒木処理、緑地帯の手入れ。管理組合・法人からのご依頼にも対応します。</p></div>
+  </div>
+</div></section>
+
+<section id="works"><div class="wrap">
+  <div class="sec-head"><h2>作業の様子</h2></div>
+  <div class="gallery">
+    <figure class="tall"><img src="/img/densen-800.jpg" alt="電線の近くに立つ高木" loading="lazy" width="600" height="800"><figcaption>電線の近くの高木</figcaption></figure>
+    <figure><img src="/img/sagyo-800.jpg" alt="重機と連携した伐採作業" loading="lazy" width="800" height="600"><figcaption>重機と連携した伐採作業</figcaption></figure>
+    <figure><img src="/img/maruta-800.jpg" alt="伐採した丸太と作業車" loading="lazy" width="800" height="600"><figcaption>伐採した丸太の集積</figcaption></figure>
+    <figure><img src="/img/shamen-800.jpg" alt="伐採・整理後の斜面" loading="lazy" width="800" height="600"><figcaption>斜面の伐採・整理</figcaption></figure>
+    <figure><img src="/img/maki-800.jpg" alt="割って積んだ薪" loading="lazy" width="800" height="600"><figcaption>伐採した木を薪に</figcaption></figure>
   </div>
 </div></section>
 
