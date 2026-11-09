@@ -1,4 +1,4 @@
-# 伐採.com 独自ドメイン切り替え時にやること（2026/11/02 bassai-com.pages.dev で検索公開済み）
+# 伐採.com 独自ドメイン切り替え（2026/11/09 実施済み）
 1. Cloudflare Pages の Custom domains に 伐採.com（xn--woq441c.com）を追加
 2. index.html の canonical・og:url・og:image・構造化データの url を https://xn--woq441c.com/ に変更
 3. robots.txt・sitemap.xml の URL を https://xn--woq441c.com/ に変更
