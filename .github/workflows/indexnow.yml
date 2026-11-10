@@ -1,0 +1,52 @@
+name: IndexNow
+on:
+  push:
+    branches: [main]
+    paths: ['**.html']
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'サイトマップの全URLを送る'
+        type: boolean
+        default: true
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Submit changed pages to IndexNow
+        env:
+          HOST: xn--woq441c.com
+          KEY: e9b40bab0bfa0f6e2e10eb038de3a594
+          ALL: ${{ github.event_name == 'workflow_dispatch' && inputs.all }}
+        run: |
+          python3 - <<'PY'
+          import os, re, json, subprocess, urllib.request, time
+          host, key = os.environ['HOST'], os.environ['KEY']
+          base = 'https://' + host
+          if os.environ.get('ALL') == 'true':
+              urls = re.findall(r'<loc>([^<]+)</loc>', open('sitemap.xml', encoding='utf-8').read())
+          else:
+              files = subprocess.run(['git', 'diff', '--name-only', 'HEAD~1', 'HEAD', '--', '*.html'],
+                                     capture_output=True, text=True).stdout.split()
+              urls = []
+              for f in files:
+                  if not os.path.exists(f) or f.endswith('404.html') or f.startswith('google'):
+                      continue
+                  p = '/' + f
+                  if p.endswith('/index.html'):
+                      p = p[:-len('index.html')]
+                  elif False:
+                      p = p[:-len('.html')]
+                  urls.append(base + p)
+          if not urls:
+              print('送るURLなし'); raise SystemExit
+          time.sleep(90)  # Cloudflare Pagesの公開を待つ
+          body = json.dumps({'host': host, 'key': key, 'keyLocation': f'{base}/{key}.txt', 'urlList': urls}).encode()
+          req = urllib.request.Request('https://api.indexnow.org/indexnow', data=body,
+                                       headers={'Content-Type': 'application/json; charset=utf-8'})
+          with urllib.request.urlopen(req) as r:
+              print(r.status, len(urls), 'URL送信'); print('\n'.join(urls))
+          PY
